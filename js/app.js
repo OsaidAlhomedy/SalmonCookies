@@ -38,6 +38,9 @@ let Seattle ={
   },
   renderCookieAmmount : function(){
 
+    let h2El = golbeVar.appendChild(document.createElement('h2'))
+    h2El.textContent = Seattle.shopLoc;
+
     let ulEl = golbeVar.appendChild(document.createElement('ul'));
     for ( let i=0 ; i<timeArr.length ; i++) {
 
@@ -55,5 +58,3 @@ let Seattle ={
 Seattle.cookiesAmount();
 Seattle.totalCokieSoldFunc();
 Seattle.renderCookieAmmount();
-console.log(Seattle);
-console.log(Seattle.totalCokiesSold);
