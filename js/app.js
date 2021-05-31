@@ -6,6 +6,11 @@ function getRndInteger(min, max) {
   return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
 
+for(let v=0 ; v<timeArr.length;v++){
+  this['arrayPerHour'+v] = null;
+}
+
+
 let tableEl = document.createElement('table');
 golbeVar.appendChild(tableEl);
 let arrOfObjects = [];
@@ -19,6 +24,7 @@ function Shops(shoploc,minCust,maxCust,avgCokie){
   this.cookieSoldPerHour =[];
   this.totalCokiesSold = null;
 
+  arrOfObjects.push(this);
 }
 
 Shops.prototype.randCusHor = function(){
@@ -49,7 +55,7 @@ Shops.prototype.totalCokieSoldFunc = function(){
 
 };
 
-Shops.prototype.tableRender = function () {
+Shops.prototype.headerRender = function () {
 
   let tr1 = document.createElement('tr');
   tableEl.appendChild(tr1);
@@ -80,31 +86,42 @@ Shops.prototype.render = function(){
 
   }
 
-  arrOfObjects.push(this);
-  console.log(arrOfObjects);
-};
+  
+  
+}
 
+Shops.prototype.footerRender = function(){
+
+  let trEl = document.createElement('tr');
+  tableEl.appendChild(trEl);
+  let tdEl = document.createElement('td');
+  trEl.appendChild(tdEl);
+  tdEl.textContent ='Total';
+  for(let i=0 ; i<timeArr.length;i++){
+    let tdEl = document.createElement('td');
+    trEl.appendChild(tdEl);
+    let totalCell = null;
+    for(let j=0;j<arrOfObjects.length;j++){
+      totalCell = totalCell + arrOfObjects[j].cookieSoldPerHour[i];
+    }
+    tdEl.textContent = totalCell;
+  }
+
+}
 
 let seattle = new Shops('Seattle',23,65,6.3);
-seattle.tableRender();
-seattle.cookiesAmount();
-seattle.totalCokieSoldFunc();
-seattle.render();
 let tokyo = new Shops('Tokyo',3,24,1.2);
-tokyo.cookiesAmount();
-tokyo.totalCokieSoldFunc();
-tokyo.render();
 let dubai = new Shops('Dubai',11,38,1.2);
-dubai.cookiesAmount();
-dubai.totalCokieSoldFunc();
-dubai.render();
 let paris = new Shops('Paris',20,38,2.3);
-paris.cookiesAmount();
-paris.totalCokieSoldFunc();
-paris.render();
 let lima = new Shops('Lima',2,16,4.6);
-lima.cookiesAmount();
-lima.totalCokieSoldFunc();
-lima.render();
 
-console.log(firstTotalArr);
+seattle.headerRender();
+
+for(let n=0 ; n<arrOfObjects.length;n++){
+  arrOfObjects[n].randCusHor();
+  arrOfObjects[n].cookiesAmount();
+  arrOfObjects[n].totalCokieSoldFunc();
+  arrOfObjects[n].render();
+}
+
+seattle.footerRender();
