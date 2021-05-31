@@ -1,5 +1,5 @@
 'use strict';
-let timeArr = ['6am :','7am :','8am :','9am :','10am :','11am :','12pm :','1pm :','2pm :','3pm :','4pm :','5pm :','6pm :','7pm :', 'Total :']
+let timeArr = ['6am :','7am :','8am :','9am :','10am :','11am :','12pm :','1pm :','2pm :','3pm :','4pm :','5pm :','6pm :','7pm :', 'Total :'];
 let golbeVar = document.getElementById('main');
 
 function getRndInteger(min, max) {
@@ -39,7 +39,7 @@ let Seattle ={
   },
   renderCookieAmmount : function(){
 
-    let h2El = golbeVar.appendChild(document.createElement('h2'))
+    let h2El = golbeVar.appendChild(document.createElement('h2'));
     h2El.textContent = this.shopLoc;
 
     let ulEl = golbeVar.appendChild(document.createElement('ul'));
