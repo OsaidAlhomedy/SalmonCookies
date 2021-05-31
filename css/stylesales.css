@@ -128,3 +128,16 @@ body{
     
 
 }
+
+th , td {
+
+    border: #4e1703 solid 1px;
+    padding: 5px;
+    border-collapse: collapse;
+    text-align: center;
+
+}
+
+table {
+
+}
