@@ -46,7 +46,7 @@ header h2 a {
 
 
 #middle {
-    background-image: url('imgs/family.jpg');
+    background-image: url('../imgs/family.jpg');
     height:400px;
     background-repeat: no-repeat;
     padding: 30px;
