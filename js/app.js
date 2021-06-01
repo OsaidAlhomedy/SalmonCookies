@@ -15,6 +15,10 @@ let tableEl = document.createElement('table');
 golbeVar.appendChild(tableEl);
 let arrOfObjects = [];
 
+// for(let b=0 < b<timeArr.length;b++){
+//   let eval('someArr'+b) = [];
+// }
+
 function Shops(shoploc,minCust,maxCust,avgCokie){
 
   this.shopLoc = shoploc;
@@ -83,6 +87,11 @@ Shops.prototype.render = function(){
     tr1El.appendChild(td2);
     td2.textContent = this.cookieSoldPerHour[j];
 
+    // for(let i=0;i<timeArr.length;i++){
+    //   if(i===j){
+    //     eval('someArr'+i).push(this.cookieSoldPerHour[i])
+    //   }
+    // }
 
   }
 
