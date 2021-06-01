@@ -3,11 +3,12 @@
 }
 
 header {
-    background-color: wheat;
+    background-color: #eaa33b;
     position: relative;
     font-size: 0;
     height:100px;
     padding-left: 20px;
+    margin-bottom: 10px;
 }
 
 header #logo {
@@ -22,7 +23,7 @@ header h1 {
     font-family: 'ZCOOL KuaiLe', cursive;
     padding-left: 30px;
     bottom: 7px;
-    color: tomato;
+    color: #922d03;
 
 }
 header h2 {
@@ -39,20 +40,89 @@ header h2 {
 }
 
 header h2 a {
-    color: tomato;
+    color: #922d03;
     text-decoration: none;
 }
 
 
+#middle {
+    background-image: url('/imgs/family.jpg');
+    height:400px;
+    background-repeat: no-repeat;
+    padding: 30px;
+    background-size:cover;
+    background-position-y: center;
+}
+
+#middle * {
+    background-color: rgba(255, 255, 255,0.5);
+    color:#282617;
+    font-size: 40px;
+    padding: 20px;
+    text-align: center;
+}
+
+#middle h2 {
+    font-size: 60px;
+    margin-top:50px ;
+    font-weight: bold;
+    font-family: 'ZCOOL KuaiLe', cursive;
+}
+
+#middle p {
+    
+    font-family: 'ZCOOL KuaiLe', serif;
+}
+
+#bot {
+    height: 500px;
+    width: 100%;
+    text-align: center;
+    padding-top: 60px;
+}
+
+#bot section {
+    display: inline-block;
+    padding-right: 2%;
+    padding-left: 2%;
+    position: relative;
+}
+
+#bot section * {
+    display: block;
+}
+
+#bot section h1 {
+    font-family:'ZCOOL KuaiLe', serif;
+    margin-bottom: 30px ;
+    font-size: 30px;
 
 
+}
 
+#loc {
+    height: 700px;
+    width: 100%;
+}
 
+#loc h1 {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+#loc h2 {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
 
 footer {
 
-    background-color: wheat;
-    height: 50px;
+    background-color: #eaa33b;
+    height: 80px;
     width: 100%;
     position: fixed;
     bottom: 0px;
@@ -63,5 +133,26 @@ footer {
 footer * {
     font-size: 20px;
     font-weight: bold;
-    color: tomato;
+    color: #922d03;
+}
+
+table {
+
+    border-collapse: collapse;
+    text-align: center;
+    position: relative;
+    left: 43%;
+
+}
+
+th , td {
+
+    border: solid black 1px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+th {
+    background-color: rgba(221, 216, 150, 0.637);
+    font-weight: bold;
 }
