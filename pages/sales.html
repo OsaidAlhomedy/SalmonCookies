@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salmon Cookies Sales</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/stylesales.css">
+    
+
+</head>
+<body>
+    <header>
+        <img src="../imgs/salmon.png" alt="logo" height=80px; id="logo">
+        <h1>Salmon Cookies Sales Page</h1>
+        <h2><a href="../index.html">Back to site</a></h2>
+    </header>
+
+   
+    <main id="main">
+        <form id="formStore">
+            <fieldset>
+            <legend>Add New Store</legend>
+            <label for="">Enter The store's location</label>
+            <input type="text"  id="storeName" required placeholder="Eg: Amman" >
+            <br>
+            <label for="">Enter the minimum customers number</label>
+            <input type="number"  id="minNum" required min="1" placeholder="Eg : 5">
+            <br>
+            <label for="">Enter the maximum customers number</label>
+            <input type="number"  id="maxNum" required min="2" placeholder="Eg : 20">
+            <br>
+            <label for="">Enter the average cookies per hour</label>
+            <input type="number" step="0.1"  id="avgNum" required min="0.1" max="100" placeholder="Eg : 2.1">
+            <br>
+            <input type="submit" value="Submit" id="but">
+
+            </fieldset>
+        </form>
+
+        
+    </main>
+
+    <footer>
+        <p> &copy All rights reserved Salmon Cookies </p>
+    </footer>
+    
+</body>
+<script src="../js/app.js"></script>
+</html>

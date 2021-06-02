@@ -1,0 +1,115 @@
+* {
+    box-sizing:border-box;
+}
+
+
+header {
+    background-color: #eaa33b;
+    position: relative;
+    font-size: 0;
+    height:100px;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+header #logo {
+    position: relative;
+    top:10px;
+}
+
+header h1 {
+    position: relative;
+    display: inline-block;
+    font-size: 60px;
+    font-family: 'ZCOOL KuaiLe', cursive;
+    padding-left: 30px;
+    bottom: 7px;
+    color: #922d03;
+
+}
+header h2 {
+    float: right;
+    display: inline-block;
+    font-size: 20px;
+    padding: 20px;
+    border: black solid 2px;
+    margin-right: 5%;
+    margin-top: 10px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+header h2 a {
+    color: #922d03;
+    text-decoration: none;
+}
+
+main {
+
+    height : 1200px;
+}
+
+footer {
+
+    background-color: #eaa33b;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    text-align: center;
+    padding: 20px;
+}
+
+footer * {
+    font-size: 20px;
+    font-weight: bold;
+    color: #922d03;
+}
+
+table {
+
+    border-collapse: collapse;
+    text-align: center;
+    position: relative;
+    left: 7%;
+    margin-top: 5%;
+
+}
+
+th , td {
+
+    border: solid black 1px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+th {
+    background-color: rgba(221, 216, 150, 0.637);
+    font-weight: bold;
+}
+
+#formStore {
+
+    padding: 10px;
+
+}
+
+#formStore legend {
+    font-size: 30px;;
+    font-weight:bold ;
+}
+
+#formStore label , input {
+
+    margin: 5px;
+
+}
+
+#but {
+    font-size: 15px;
+    font-weight: bold;
+    width:80px;
+    padding: 10px;
+
+}
