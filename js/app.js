@@ -1,4 +1,7 @@
 'use strict';
+
+
+
 let timeArr = ['6:00am','7:00am','8:00am','9:00am','10:00am','11:00am','12:00pm','1:00pm','2:00pm','3:00pm','4:00pm','5:00pm','6:00pm','7:00pm','Daily Location Total'];
 let golbeVar = document.getElementById('main');
 
@@ -13,6 +16,7 @@ for(let v=0 ; v<timeArr.length;v++){
 
 let tableEl = document.createElement('table');
 golbeVar.appendChild(tableEl);
+tableEl.id = 'tableId';
 let arrOfObjects = [];
 
 // for(let b=0 < b<timeArr.length;b++){
@@ -95,9 +99,9 @@ Shops.prototype.render = function(){
 
   }
 
-  
-  
-}
+
+
+};
 
 Shops.prototype.footerRender = function(){
 
@@ -118,19 +122,53 @@ Shops.prototype.footerRender = function(){
 
 }
 
+Shops.prototype.footerRenderNew = function() {
+  let removeRow = document.querySelector('#tableId').lastChild;
+  tableEl.removeChild(removeRow);
+};
+
 let seattle = new Shops('Seattle',23,65,6.3);
 let tokyo = new Shops('Tokyo',3,24,1.2);
 let dubai = new Shops('Dubai',11,38,1.2);
 let paris = new Shops('Paris',20,38,2.3);
 let lima = new Shops('Lima',2,16,4.6);
 
+const formStore = document.getElementById('formStore');
+formStore.addEventListener('submit',submitHandle);
+
+function submitHandle(event) {
+  event.preventDefault()
+  let storeName = null;
+  let minn = null;
+  let maxx = null;
+  let avgg = null;
+  storeName = event.target.storeName.value;
+  minn = event.target.minNum.value;
+  maxx = event.target.maxNum.value;
+  avgg = event.target.avgNum.value;
+
+  let newStore = new Shops(storeName,minn,maxx,avgg);
+  newStore.footerRenderNew()
+  newStore.randCusHor();
+  newStore.cookiesAmount();
+  newStore.totalCokieSoldFunc();
+  newStore.render();
+  newStore.footerRender();
+  console.log(arrOfObjects)
+  console.log(event);
+}
+
+
 seattle.headerRender();
 
-for(let n=0 ; n<arrOfObjects.length;n++){
-  arrOfObjects[n].randCusHor();
-  arrOfObjects[n].cookiesAmount();
-  arrOfObjects[n].totalCokieSoldFunc();
-  arrOfObjects[n].render();
+function renderingAll(){
+  for(let n=0 ; n<arrOfObjects.length;n++){
+    arrOfObjects[n].randCusHor();
+    arrOfObjects[n].cookiesAmount();
+    arrOfObjects[n].totalCokieSoldFunc();
+    arrOfObjects[n].render();
+  }
 }
+renderingAll();
 
 seattle.footerRender();

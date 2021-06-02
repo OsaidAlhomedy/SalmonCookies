@@ -22,6 +22,25 @@
 
    
     <main id="main">
+        <form id="formStore">
+            <fieldset>
+            <legend>Add New Store</legend>
+            <label for="">Enter The store's location</label>
+            <input type="text"  id="storeName" required placeholder="Eg: Amman" >
+            <br>
+            <label for="">Enter the minimum customers number</label>
+            <input type="number"  id="minNum" required min="1" placeholder="Eg : 5">
+            <br>
+            <label for="">Enter the maximum customers number</label>
+            <input type="number"  id="maxNum" required min="2" placeholder="Eg : 20">
+            <br>
+            <label for="">Enter the average cookies per hour</label>
+            <input type="number" step="0.1"  id="avgNum" required min="0.1" max="100" placeholder="Eg : 2.1">
+            <br>
+            <input type="submit" value="Submit" id="but">
+
+            </fieldset>
+        </form>
 
         
     </main>
